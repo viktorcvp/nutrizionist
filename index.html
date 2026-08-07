@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Нутрициолог Анна</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script>
+tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','sans-serif']}}}}
+</script>
+</head>
+<body class="font-sans antialiased bg-stone-50 text-gray-800">
+
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-stone-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+    <a href="#" class="text-xl font-semibold text-gray-900">Нутрициолог <span class="text-emerald-600">Анна</span></a>
+    <nav class="hidden md:flex space-x-8">
+    <a href="#about" class="text-gray-600 hover:text-emerald-600 transition-colors">Обо мне</a>
+    <a href="#services" class="text-gray-600 hover:text-emerald-600 transition-colors">Услуги</a>
+    <a href="#testimonials" class="text-gray-600 hover:text-emerald-600 transition-colors">Отзывы</a>
+    <a href="#contact" class="text-gray-600 hover:text-emerald-600 transition-colors">Контакты</a>
+    </nav>
+    <div class="hidden md:block">
+    <a href="#contact" class="inline-flex items-center justify-center px-5 py-2.5 bg-emerald-600 text-white font-medium rounded-full hover:bg-emerald-700 transition-all shadow-md hover:shadow-lg">Записаться</a>
+    </div>
+    <button class="md:hidden p-2 rounded-lg hover:bg-stone-100 transition-colors" @click="mobileMenuOpen = !mobileMenuOpen" x-data="{ mobileMenuOpen: false }">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+    </div>
+    </div>
+    <div x-show="mobileMenuOpen" x-transition class="md:hidden bg-white border-t border-stone-100">
+    <div class="px-4 pt-2 pb-4 space-y-1">
+    <a href="#about" class="block px-3 py-2 rounded-md text-gray-600 hover:text-emerald-600 hover:bg-stone-50">Обо мне</a>
+    <a href="#services" class="block px-3 py-2 rounded-md text-gray-600 hover:text-emerald-600 hover:bg-stone-50">Услуги</a>
+    <a href="#testimonials" class="block px-3 py-2 rounded-md text-gray-600 hover:text-emerald-600 hover:bg-stone-50">Отзывы</a>
+    <a href="#contact" class="block px-3 py-2 rounded-md text-gray-600 hover:text-emerald-600 hover:bg-stone-50">Контакты</a>
+    <a href="#contact" class="block px-3 py-2 mt-2 text-center bg-emerald-600 text-white rounded-full">Записаться</a>
+    </div>
+    </div>
+    </header>
+
+    <section class="relative overflow-hidden py-16 md:py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <div class="max-w-xl">
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">Здоровье <span class="text-emerald-600">начинается</span> с тарелки</h1>
+    <p class="mt-6 text-lg md:text-xl text-gray-600 leading-relaxed">Я помогу вам построить индивидуальное питание без голодовок и ограничений. Восстановите энергию, наладите пищеварение и обретите гармонию с собой.</p>
+    <div class="mt-8 flex flex-col sm:flex-row gap-4">
+    <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 bg-emerald-600 text-white font-semibold rounded-full hover:bg-emerald-700 transition-all shadow-lg hover:shadow-xl">Начать путь <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+    <a href="#services" class="inline-flex items-center justify-center px-8 py-4 bg-white text-gray-700 font-semibold rounded-full border border-gray-200 hover:border-emerald-600 hover:text-emerald-600 transition-all">Узнать больше</a>
+    </div>
+    </div>
+    <div class="relative">
+    <div class="aspect-square max-w-md mx-auto lg:max-w-none">
+    <div class="w-full h-full rounded-3xl bg-gradient-to-br from-emerald-100 to-stone-200 flex items-center justify-center shadow-2xl">
+    <div class="text-center p-8">
+    <svg class="w-32 h-32 mx-auto text-emerald-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+    <p class="text-emerald-800 font-medium text-lg">Фото эксперта</p>
+    </div>
+    </div>
+    </div>
+    <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-emerald-100 rounded-full -z-10"></div>
+    <div class="absolute -top-4 -left-4 w-32 h-32 bg-stone-200 rounded-full -z-10"></div>
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Если вы узнали себя в этом</h2>
+    <p class="mt-4 text-lg text-gray-600">Со мной вы получите системный подход, а не временные решения</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+    <div class="group p-8 rounded-2xl bg-stone-50 hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-stone-100">
+    <div class="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-600 transition-colors">
+    <svg class="w-7 h-7 text-emerald-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+    </div>
+    <h3 class="text-xl font-semibold text-gray-900 mb-3">Устали от бесконечных диет?</h3>
+    <p class="text-gray-600 leading-relaxed">Диеты, которые обещают быстрое похудение, но возвращают вес обратно. Я научу вас есть вкусно и без чувства вины.</p>
+    </div>
+    <div class="group p-8 rounded-2xl bg-stone-50 hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-stone-100">
+    <div class="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-600 transition-colors">
+    <svg class="w-7 h-7 text-emerald-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+    </div>
+    <h3 class="text-xl font-semibold text-gray-900 mb-3">Нет энергии даже после сна?</h3>
+    <p class="text-gray-600 leading-relaxed">Постоянная усталость, вялость и отсутствие сил. Сбалансированное питание вернёт вам бодрость и ясность ума.</p>
+    </div>
+    <div class="group p-8 rounded-2xl bg-stone-50 hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-stone-100">
+    <div class="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-600 transition-colors">
+    <svg class="w-7 h-7 text-emerald-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+    </div>
+    <h3 class="text-xl font-semibold text-gray-900 mb-3">Проблемы с ЖКТ?</h3>
+    <p class="text-gray-600 leading-relaxed">Вздутие, тяжесть, нерегулярность. Вместе мы выявим причины дискомфорта и наладим работу кишечника.</p>
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <section id="about" class="py-16 md:py-24 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <div class="order-2 lg:order-1">
+    <div class="aspect-[4/3] max-w-lg mx-auto lg:max-w-none">
+    <div class="w-full h-full rounded-3xl bg-gradient-to-br from-emerald-50 to-stone-100 flex items-center justify-center shadow-inner">
+    <div class="text-center p-8">
+    <svg class="w-24 h-24 mx-auto text-emerald-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+    <p class="text-emerald-800 font-medium text-lg">Медицинское образование</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="order-1 lg:order-2">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Обо <span class="text-emerald-600">мне</span></h2>
+    <div class="space-y-4 text-gray-600 leading-relaxed">
+    <p>Меня зовут Анна, я сертифицированный нутрициолог с медицинским образованием. Более 5 лет помогаю людям восстанавливать здоровье через правильное питание.</p>
+    <p>Мой подход основан на научных данных и индивидуальном анализе организма. Никаких экстремальных диет и голодовок — только гармоничное питание, которое подходит именно вашей жизни.</p>
+    <p>Я верю, что еда — это не враг, а друг. Вместе мы найдём баланс, который даст вам энергию, хорошее самочувствие и уверенность в каждом дне.</p>
+    </div>
+    <div class="mt-8 flex flex-wrap gap-4">
+    <div class="flex items-center gap-2"><svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-sm text-gray-600">Медицинское образование</span></div>
+    <div class="flex items-center gap-2"><svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-sm text-gray-600">Сертификат нутрициолога</span></div>
+    <div class="flex items-center gap-2"><svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-sm text-gray-600">5+ лет практики</span></div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <section id="services" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Услуги и <span class="text-emerald-600">цены</span></h2>
+    <p class="mt-4 text-lg text-gray-600">Выберите формат работы, который подходит именно вам</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+    <div class="rounded-2xl bg-stone-50 p-8 border border-stone-100 hover:shadow-lg transition-all duration-300">
+    <div class="text-center mb-6">
+    <h3 class="text-xl font-semibold text-gray-900">Консультация</h3>
+    <div class="mt-4"><span class="text-4xl font-bold text-gray-900">3 500₽</span></div>
+    <p class="mt-2 text-sm text-gray-500">Первая встреча</p>
+    </div>
+    <ul class="space-y-3 mb-8">
+    <li class="flex items-start"><svg class="w-5 h-5 text-emerald-600 mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-gray-600">Анализ текущего рациона</span></li>
+    <li class="flex items-start"><svg class="w-5 h-5 text-emerald-600 mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-gray-600">Выявление дефицитов</span></li>
+    <li class="flex items-start"><svg class="w-5 h-5 text-emerald-600 mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-gray-600">Первые рекомендации</span></li>
+    <li class="flex items-start"><svg class="w-5 h-5 text-emerald-600 mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-gray-600">60 минут онлайн</span></li>
+    </ul>
+    <a href="#contact" class="block w-full text-center py-3 px-6 border-2 border-emerald-600 text-emerald-600 font-semibold rounded-full hover:bg-emerald-600 hover:text-white transition-all">Выбрать</a>
+    </div>
+    <div class="relative rounded-2xl bg-emerald-600 p-8 text-white shadow-xl transform md:-translate-y-4">
+    <div class="absolute top-0 right-8 -translate-y-1/2 bg-amber-400 text-gray-900 text-sm font-bold px-4 py-1 rounded-full">ХИТ</div>
+    <div class="text-center mb-6">
+    <h3 class="text-xl font-semibold">Меню на месяц</h3>
+    <div class="mt-4"><span class="text-4xl font-bold">12 000₽</span></div>
+    <p class="mt-2 text-sm text-emerald-100">Комплексное сопровождение</p>
+    </div>
+    <ul class="space-y-3 mb-8">
+    <li class="flex items-start"><svg class="w-5 h-5 text-white mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-emerald-50">Индивидуальное меню на 30 дней</span></li>
+    <li class="flex items-start"><svg class="w-5 h-5 text-white mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-emerald-50">Список покупок</span></li>
+    <li class="flex items-start"><svg class="w-5 h-5 text-white mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-emerald-50">3 консультации по корректировке</span></li>
+    <li class="flex items-start"><svg class="w-5 h-5 text-white mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-emerald-50">Поддержка в чате 30 дней</span></li>
+    </ul>
+    <a href="#contact" class="block w-full text-center py-3 px-6 bg-white text-emerald-600 font-semibold rounded-full hover:bg-gray-100 transition-all">Выбрать</a>
+    </div>
+    <div class="rounded-2xl bg-stone-50 p-8 border border-stone-100 hover:shadow-lg transition-all duration-300">
+    <div class="text-center mb-6">
+    <h3 class="text-xl font-semibold text-gray-900">Полное ведение</h3>
+    <div class="mt-4"><span class="text-4xl font-bold text-gray-900">25 000₽</span></div>
+    <p class="mt-2 text-sm text-gray-500">3 месяца трансформации</p>
+    </div>
+    <ul class="space-y-3 mb-8">
+    <li class="flex items-start"><svg class="w-5 h-5 text-emerald-600 mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-gray-600">Всё из тарифа "Меню"</span></li>
+    <li class="flex items-start"><svg class="w-5 h-5 text-emerald-600 mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-gray-600">8 консультаций с нутрициологом</span></li>
+    <li class="flex items-start"><svg class="w-5 h-5 text-emerald-600 mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-gray-600">Анализы и коррекция</span></li>
+    <li class="flex items-start"><svg class="w-5 h-5 text-emerald-600 mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-gray-600">Поддержка в чате 3 месяца</span></li>
+    </ul>
+    <a href="#contact" class="block w-full text-center py-3 px-6 border-2 border-emerald-600 text-emerald-600 font-semibold rounded-full hover:bg-emerald-600 hover:text-white transition-all">Выбрать</a>
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <section id="testimonials" class="py-16 md:py-24 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Отзывы <span class="text-emerald-600">клиентов</span></h2>
+    <p class="mt-4 text-lg text-gray-600">Истории тех, кто уже изменил свою жизнь</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+    <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100">
+    <div class="flex items-center gap-1 mb-4">
+    <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+    <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+    <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+    <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+    <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+    </div>
+    <p class="text-gray-600 leading-relaxed mb-6">"За 2 месяца работы с Анной я сбросила 8 кг без чувства голода. Наконец-то перестала считать калории и начала просто наслаждаться едой. Энергии стало гораздо больше!"</p>
+    <div class="flex items-center">
+    <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mr-4"><span class="text-emerald-700 font-semibold">ЕК</span></div>
+    <div><p class="font-semibold text-gray-900">Елена К.</p><p class="text-sm text-gray-500">32 года, маркетолог</p></div>
+    </div>
+    </div>
+    <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100">
+    <div class="flex items-center gap-1 mb-4">
+    <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+    <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+    <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+    <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+    <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+    </div>
+    <p class="text-gray-600 leading-relaxed mb-6">"После консультации у Анны я перестала испытывать тяжесть после еды. Появились силы, улучшился сон. Я наконец-то поняла, что такое нормальное питание без ограничений."</p>
+    <div class="flex items-center">
+    <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mr-4"><span class="text-emerald-700 font-semibold">ОМ</span></div>
+    <div><p class="font-semibold text-gray-900">Ольга М.</p><p class="text-sm text-gray-500">41 год, врач</p></div>
+    </div>
+    </div>
+    <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100">
+    <div class="flex items-center gap-1 mb-4">
+    <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+    <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+    <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+    <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+    <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+    </div>
+    <p class="text-gray-600 leading-relaxed mb-6">"Я всегда относилась к еде как к врагу. Анна помогла мне пересмотреть это отношение. Теперь я ем вкусно, разнообразно и не набираю вес. Рекомендую!"</p>
+    <div class="flex items-center">
+    <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mr-4"><span class="text-emerald-700 font-semibold">ДВ</span></div>
+    <div><p class="font-semibold text-gray-900">Дарья В.</p><p class="text-sm text-gray-500">27 лет, дизайнер</p></div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Свяжитесь <span class="text-emerald-600">со мной</span></h2>
+    <p class="mt-4 text-lg text-gray-600">Оставьте заявку, и я свяжусь с вами для бесплатной консультации</p>
+    </div>
+    <div class="max-w-xl mx-auto">
+    <form class="space-y-6" onsubmit="event.preventDefault(); alert('Спасибо! Я свяжусь с вами в ближайшее время.');">
+    <div>
+    <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Имя</label>
+    <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200 outline-none transition-all" placeholder="Ваше имя">
+    </div>
+    <div>
+    <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Телефон</label>
+    <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200 outline-none transition-all" placeholder="+7 (999) 999-99-99">
+    </div>
+    <button type="submit" class="w-full py-4 px-6 bg-emerald-600 text-white font-semibold rounded-full hover:bg-emerald-700 transition-all shadow-lg hover:shadow-xl">Отправить заявку</button>
+    </form>
+    <div class="mt-12 text-center">
+    <p class="text-gray-600 mb-4">Или свяжитесь со мной напрямую:</p>
+    <div class="flex justify-center gap-6">
+    <a href="tel:+79999999999" class="text-gray-600 hover:text-emerald-600 transition-colors">+7 (999) 999-99-99</a>
+    <a href="mailto:anna@example.com" class="text-gray-600 hover:text-emerald-600 transition-colors">anna@example.com</a>
+    </div>
+    <div class="mt-6 flex justify-center gap-4">
+    <a href="#" class="w-10 h-10 bg-stone-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-emerald-600 hover:text-white transition-all">TG</a>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+    <p class="text-gray-400">© 2026 Нутрициолог Анна. Все права защищены.</p>
+    </div>
+    </div>
+    </footer>
+    </body>
+    </html>
